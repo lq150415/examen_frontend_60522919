@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'biblioteca-app';
+  appName: string = 'Biblioteca';
+  sidebarMode: 'true' | 'false' = 'true';
+
+  onToggleSidebar() {
+    this.sidebarMode = this.sidebarMode === 'true' ? 'false' : 'true';
+  }
 }

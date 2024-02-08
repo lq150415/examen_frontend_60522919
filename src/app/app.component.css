@@ -1,0 +1,24 @@
+:host {
+  display: block;
+  height: 100vh; /* Ajusta según tus necesidades */
+}
+
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 250px;
+}
+
+mat-sidenav-content {
+  padding: 16px;
+}
+
+.custom-card {
+  margin: 20px auto; /* Margen para centrar el card */
+  padding: 20px; /* Espaciado interno del card */
+  box-sizing: border-box; /* Garantiza que el relleno y el borde no afecten el tamaño total */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega sombra al card */
+}

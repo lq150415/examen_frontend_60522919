@@ -1,0 +1,18 @@
+.mat-mdc-nav-list a:hover {
+  background-color: rgba(144, 202, 249, 0.8); /* Fondo de color del tema */
+  color: white;
+  border-radius: 0 10px 10px 0;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transición de 0.3 segundos al cambiar el color de fondo y el color del texto */
+}
+.mat-mdc-nav-list a::after:hover:last-child {
+  color: white !important;
+}
+.mat-mdc-nav-list a {
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transición de 0.3 segundos al cambiar el color de fondo y el color del texto */
+}
+
+.mat-mdc-nav-list a.router-link-active {
+  background-color: #2196f3; /* Fondo de color del tema */
+  color: white;
+  border-radius: 0 10px 10px 0;
+}

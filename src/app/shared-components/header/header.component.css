@@ -1,0 +1,29 @@
+.mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .app-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 16px;
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
+  /* app-header.component.css o app-header.component.scss */
+.mat-toolbar {
+  background-color: #2196F3; /* Color de fondo de la barra de herramientas */
+}
+
+.menu-button, .custom-icon-button {
+  background-color: transparent; /* Fondo transparente para los botones */
+  border: none; /* Elimina el borde del botón */
+  color: white; /* Color del texto/icono */
+  transition: transform 0.3s ease-in-out; /* Agrega una transición suave */
+}
+
+.menu-button:hover, .custom-icon-button:hover {
+  transform: scale(1.2); /* Aumenta el tamaño al pasar el mouse */
+}
