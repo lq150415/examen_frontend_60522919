@@ -1,1 +1,21 @@
-<p>gestionar-libros works!</p>
+<div class="header-container">
+    <h1>Administración de Libros</h1>
+    <div class="header-buttons">
+        <button mat-raised-button color="primary" (click)="abrirModalCrearLibro()">Nuevo Libro</button>
+    </div>
+</div>
+<hr>
+<table datatable class="table" [dtOptions]="dtOptions">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Titulo</th>
+            <th>Nombre de autor</th>
+            <th>Lote</th>
+            <th>Descripcion</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>

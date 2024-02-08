@@ -1,1 +1,40 @@
-<p>reportes works!</p>
+<h1>Reportes</h1>
+<hr>
+<form (ngSubmit)="generarReporte()" #form="ngForm">
+  <mat-form-field>
+    <mat-label>Tipo de Reporte</mat-label>
+    <mat-select [(ngModel)]="tipoReporte" name="tipoReporte" required>
+      <mat-option value="clientesVencidos">Clientes con Préstamos Vencidos</mat-option>
+      <mat-option value="prestamosSegmentados">Préstamos Segmentados</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div *ngIf="tipoReporte === 'prestamosSegmentados'">
+    <mat-form-field>
+      <mat-label>Periodo</mat-label>
+      <mat-select [(ngModel)]="periodo" name="periodo" required>
+        <mat-option value="semana">Semana</mat-option>
+        <mat-option value="mes">Mes</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field *ngIf="periodo === 'semana'">
+      <mat-label>Semana</mat-label>
+      <!-- Agrega aquí el campo para seleccionar la semana -->
+      <input matInput type="number" [(ngModel)]="semana" name="semana" placeholder="Número de semana" required>
+    </mat-form-field>
+
+    <mat-form-field *ngIf="periodo === 'mes'">
+      <mat-label>Mes</mat-label>
+      <!-- Agrega aquí el campo para seleccionar el mes -->
+      <input matInput type="text" [(ngModel)]="mes" name="mes" placeholder="Nombre del mes" required>
+    </mat-form-field>
+  </div>
+
+  <button mat-raised-button color="primary" type="submit">Generar Reporte</button>
+</form>
+
+<!-- Datatable para mostrar los resultados -->
+<table datatable [dtOptions]="dtOptions" *ngIf="resultados && resultados.length > 0">
+  <!-- Agrega aquí las columnas necesarias: id, fecha, cliente, libro, días, estado, acciones -->
+</table>

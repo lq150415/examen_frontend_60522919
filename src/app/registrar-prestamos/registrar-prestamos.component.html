@@ -1,1 +1,38 @@
-<p>registrar-prestamos works!</p>
+<h1>Registrar préstamo de libro</h1>
+<hr>
+<div class="vertical-form-container">
+  <form class="vertical-form">
+    <mat-form-field>
+      <mat-label>Fecha de préstamo</mat-label>
+      <input matInput [matDatepicker]="picker" placeholder="Seleccione una fecha" [(ngModel)]="fechaPrestamo" name="fechaPrestamo" required>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Cliente</mat-label>
+      <mat-select [(value)]="cliente" name="cliente" required>
+        <mat-option *ngFor="let cliente of clientes" [value]="cliente">{{ cliente }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Libro</mat-label>
+      <mat-select [(value)]="libro" name="libro" required>
+        <mat-option *ngFor="let libro of libros" [value]="libro">{{ libro }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Días de préstamo</mat-label>
+      <input matInput type="number" [(ngModel)]="diasPrestamo" name="diasPrestamo" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Fecha límite</mat-label>
+      <input matInput [value]="calcularFechaLimite()" disabled>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="guardarPrestamo()">Guardar préstamo</button>
+  </form>
+</div>

@@ -1,0 +1,15 @@
+<form class="modal-form mat-elevation-z8 p-4">
+    <h2>{{ titulo }}</h2>
+  
+    <div *ngFor="let campo of campos" class="mb-3">
+      <mat-form-field class="w-100">
+        <mat-label>{{ campo.etiqueta }}</mat-label>
+        <input matInput [placeholder]="obtenerPlaceholder(campo.placeholder)" [name]="campo.nombre" [required]="campo.required">
+      </mat-form-field>
+    </div>
+  
+    <div class="d-flex justify-content-end">
+      <button mat-raised-button color="primary" class="me-2">Guardar</button>
+      <button mat-raised-button (click)="cerrarModal()">Cerrar</button>
+    </div>
+  </form>

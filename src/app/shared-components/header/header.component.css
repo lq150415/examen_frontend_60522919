@@ -27,3 +27,12 @@
 .menu-button:hover, .custom-icon-button:hover {
   transform: scale(1.2); /* Aumenta el tamaño al pasar el mouse */
 }
+.no-link-style {
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  color: inherit; /* Utiliza el color del texto predeterminado */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el enlace */
+}
+
+.no-link-style:hover {
+  text-decoration: none; /* Asegura que no haya subrayado al pasar el mouse */
+}

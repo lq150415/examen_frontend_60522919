@@ -1,0 +1,11 @@
+.vertical-form-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .vertical-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px; /* Ajusta según tus necesidades */
+    width: 100%;
+  }

@@ -1,0 +1,13 @@
+.modal-form {
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .form-field {
+    margin-bottom: 16px;
+  }
+  
+  .botones {
+    margin-top: 16px;
+    text-align: right;
+  }

@@ -1,0 +1,10 @@
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Para centrar verticalmente si es necesario */
+  }
+  
+  .header-buttons {
+    margin-right: 16px; /* Ajusta el espacio entre el título y el botón según sea necesario */
+  }
